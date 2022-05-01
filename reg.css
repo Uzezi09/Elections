@@ -1,0 +1,15 @@
+/* .login-error-message{
+  color: #F04C4C;
+} */
+
+.input-field .error{
+  color: #F04C4C;
+}
+
+.input-field .success{
+  color: #28a745;
+}
+
+.input-field small{
+  color: #F04C4C;
+}

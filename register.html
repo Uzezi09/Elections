@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="reg.css">
+  <title>2023 Election</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico.ico">
+</head>
+<body>
+  <header id="about-header">
+    <div class="about-container">
+      <nav id="main-nav">
+        <a href="#" class="logo-lead">
+          <img src="./img/logo-img.jpg" alt="politico" class="logo"><span class="logo-text">theElections</span>
+        </a>
+        <ul>
+          <li><a href="home.html" class="current">Home</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="result.html">Check Result</a></li>
+        </ul>
+      </nav>
+    </div> 
+  </header>
+
+  <section id="register-form">
+    <form action="" class="form-input" id="reg-form">
+      <h1>Register</h1>
+
+      <div class="input-field">
+        <label for="firstname">First Name:</label>
+        <input type="text" name="firstname" id="firstname" placeholder="firstname">
+        <small></small>
+      </div>
+
+      <div class="input-field">
+        <label for="lastname">Last Name:</label>
+        <input type="text" name="lastname" id="lastname" placeholder="lastname"> 
+        <small></small>
+      </div>
+
+      <div class="input-field error">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="123@gmail.com"> 
+        <small></small>
+      </div>
+
+      <div class="input-field error success">
+        <label for="phone">Phone Number:</label>
+        <input type="phone" name="phone" id="phone" placeholder="08012345678">
+        <small></small>
+      </div>
+
+      <div class="input-field error success">
+        <label for="userType">Select User Type:</label>
+        <select type="text" name="userType" id="userType">
+          <option> User</option>
+          <option> Politician</option>
+        </select>
+      </div>
+
+      <div class="input-field error success">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="enter password">
+        <small></small>
+      </div>
+
+      <div class="input-field error success">
+        <label for="password2">Confirm password</label>
+        <input type="password" name="password2" id="password2" placeholder="re-enter password">
+        <small></small>
+      </div>
+      <br>
+
+      <div class="input-field">
+        <button type="submit" class="btn login-link">Create Account</button>
+        <p class="btn-text">Already have an account? <a href="login.html"><span>Login</span></a></p> 
+      </div>
+
+  </form>
+  </section>
+  <footer id="main-footer">
+    <div class="footer-text">
+      <p>copywrite &copy 2023 Election Poll By Maureen Uzezi Ozakpumue</p>
+    </div>
+  </footer>
+
+  <script src="reg.js"></script>
+</body>
+</html>

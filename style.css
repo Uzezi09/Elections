@@ -1,0 +1,253 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.btn{
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border: none;
+  cursor: pointer;
+  background-color: #008751;
+  border-radius: 5rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #FFFFFF;
+  /* width: 100%; */
+}
+
+a{
+  text-decoration: none;
+  color:#fff;
+  border-bottom: 3px transparent solid;
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+  transition: border-color 0.5s;
+  font-size: 1rem;
+}
+
+a:hover{
+  border-color: #FFFFFF;
+}
+
+a.current{
+  border-color: #008751;
+}
+
+.logo-lead{
+  border: none;
+}
+
+li{
+  list-style: none;
+  padding: 1rem;
+}
+
+.logo{
+  display: block;
+  height: 50px;
+  width: 50px;
+}
+
+#header-home{
+  background:url(./img/bg-nig.jpg) no-repeat center center / cover;
+  height: 100vh;
+  color: #333;
+}
+
+.container{
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+#main-nav{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  flex-wrap: wrap;
+}
+
+#main-nav ul{
+  display: flex;
+  flex-direction: row;
+}
+
+.header-content{
+  text-align: center;
+  padding-top: 15%;
+  color: #333;
+}
+
+.header-content h1{
+  font-size: 4rem;
+  line-height: 1.2;
+}
+
+.header-content p{
+  margin-bottom: 1.3rem;
+}
+
+#main-footer{
+  height: 5rem;
+  background: #008751;
+  color: #fff;
+}
+
+.footer-text{
+  font-size: 0.6rem;
+  font-family: 'itally';
+  text-align: center;
+  padding: 1.5rem 0;
+  height: 5rem;
+}
+
+/* register */
+#about-header{
+  background: linear-gradient(to bottom,#008751 0%, #FFFFFF 200%);
+  height: 20vh;
+  box-shadow: 0px 0px 20px rgb(10, 241, 122);
+}
+
+#register-form .form-input{
+  max-width: 550px;
+  margin: 3rem auto;
+  padding: 0.6rem;
+  box-shadow: 0px 0px 5px rgb(10, 241, 122);;
+  border-radius: 5px;
+}
+
+#register-form h1{
+  font-size: 2.5rem;
+  line-height: 1.2;
+  text-align: center;
+  padding: 1rem 1.5rem;
+}
+
+#register-form input{
+  display: block;
+  width: 100%;
+  height: 2rem;
+  padding: 0.7rem;
+  border: 0.08rem solid #008751;
+  border-radius: 0.6rem;
+}
+
+#register-form input:focus{
+  outline: none;
+}
+
+#register-form input:hover{
+  background: #eeeeee;
+  border: 1px solid #008751;
+}
+
+#register-form ::placeholder{
+  padding: 0.3rem;
+  text-transform: uppercase;
+}
+
+#register-form .input-field{
+  display: flex;
+  flex-direction: column;
+  padding: 0.1rem;
+  margin: 0 1rem;
+}
+
+#register-form .btn-text{
+  font-size: 0.7rem;
+}
+
+#register-form span{
+  color: #008751;
+  text-transform: lowercase;
+  font-size: 0.7rem;
+}
+
+#register-form select{
+  height: 2rem;
+  border: 0.08rem solid #008751;
+}
+
+select:focus{
+  outline: none;
+}
+
+/* LOGIN */
+#login-form{
+  line-height: 1.0;
+}
+#login-form span{
+  text-transform: uppercase;
+}
+
+#register-form .text-reset{
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+/* POLITICAL */
+#home-page{
+  margin: 2rem 1rem;
+}
+
+#polPty{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  margin: 1rem auto;
+  max-width: 1000px;
+  height: auto;
+}
+
+.polPty img{
+  width: 70%;
+  height: 60%;
+  margin: 0.3rem 2rem;
+}
+
+.polPty{
+  width: 220px;
+  padding: 0.2rem;
+  margin: 0 0.1rem;
+  box-shadow: 0px 0px 5px rgb(10, 241, 122);;
+}
+
+.text{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  padding: 0.6rem;
+}
+
+/* petition form  */
+textarea{
+  font-size: 0.9rem;
+  font-weight: 100;
+  padding: 0.8rem;
+  width: 100%;
+  border-radius: 0.6rem;
+  border: 0.08rem solid #008751;
+}
+
+textarea:focus{
+  outline: none;
+}
+
+.btn-m{
+  margin: 1rem 0;
+}
+
+/* application form  */
+#register-form select{
+  font-size: 0.9em;
+  padding: 0.1rem;
+  border-radius: 0.6rem;
+}
