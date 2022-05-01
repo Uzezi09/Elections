@@ -38,6 +38,7 @@ const politicalParty = [
   }
 ]
 
+
 const polPty = document.getElementById('polPty');
 
 function createParty(party) {
@@ -61,4 +62,3 @@ function createParty(party) {
 for (let party of politicalParty) {
   polPty.appendChild(createParty(party));
 }
-
