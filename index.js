@@ -1,7 +1,8 @@
 const toggBar = document.querySelector('.toggle-bar')
-const menuList = document.querySelector('.list');
+const menu = document.querySelector('.list');
 
 toggBar.addEventListener('click', () => {
-  menuList.classList.toggle('active');
+  // menu.classList.add('active');
+  menu.style.display = 'block';
   console.log('hi')
 })

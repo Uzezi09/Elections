@@ -30,11 +30,16 @@ nav .toggle-bar{
 }
 
 .toggle-line {
-  height: 0.12rem;
+  height: 4px;
   width: 3rem;
- border: 1px solid red;
+  background: red;
   margin: 2px;
 }
+
+/* .active{
+  display: block;
+  background: pink;
+} */
 
 a{
   text-decoration: none;
@@ -82,17 +87,17 @@ li{
 }
 
 #main-nav{
-  position: relative;
   display: flex;
   justify-content: space-between;
   padding-top: 1rem;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
 }
 
 #main-nav ul{
   display: flex;
   flex-direction: row;
 }
+
 
 .header-content{
   text-align: center;
