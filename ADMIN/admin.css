@@ -1,0 +1,142 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.table img{
+  display: block;
+  width: 40%;
+  height: 50%;
+  border-radius: 50%;
+}
+
+#admin-body a{
+  color: #008750;
+  text-transform: lowercase;
+  background: #ffffff;
+}
+
+#admin-body{
+  position: relative;
+  margin: 2.5rem auto;
+  margin-bottom: 0.6rem;
+}
+
+#admin-section{
+  background: #fff;
+  padding: 0.9rem;
+  margin: 1.5rem auto;
+  height: 10rem;
+  width: 80%;
+  box-shadow: 0px 0px 4px rgb(10, 241, 122);
+}
+
+#admin-body h2{
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+#admin-body p {
+  font-size: 1.1rem;
+}
+
+#admin-body .admin-menu{
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 90%;
+  margin: 0 auto; 
+}  
+
+#admin-body .links{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center; 
+  margin: 1rem 0;
+} 
+
+#admin-body .button{
+  display: inline-block;
+  font-weight: 550;
+  font-size: 1rem;
+  margin: 0.4rem;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 5rem;
+  letter-spacing: 0.05rem;
+  border: 2px solid #008750;
+}
+
+#admin-body a.button{
+  box-shadow: 0px 0px 4px rgb(10, 241, 122);
+}
+
+#admin-body .button:hover{
+  background: #008756;
+  color: #fff;
+  box-shadow: 0px 0px 4px rgb(10, 241, 122);
+}
+
+/* table  */
+
+#party{
+  background: #fff;
+  padding: 0.9rem;
+  width: 70%;
+  height: 9.8rem;
+  margin: 0 auto;
+  
+}
+
+#party .party-menu{
+  margin-top: 3rem;
+}
+
+#party .party-header{
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333333;
+  
+}
+
+table, th, td {
+  border: 1px solid;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-top: none;
+  border-left: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-right: none;
+  /* border: 1px solid red; */
+  height: 20%;
+  margin: 2rem;
+  margin-bottom: 1rem;
+  /* box-shadow: 0px 0px 20px rgb(10, 241, 122) */
+}
+
+th {
+  height: 20px;
+  text-transform: uppercase;
+  border-right: none;
+}
+
+td {
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+td:last-child{
+  border-right: none;
+} 

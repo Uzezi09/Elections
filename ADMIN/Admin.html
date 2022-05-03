@@ -8,18 +8,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="admin.css">
   <title>2023 Election</title>
   <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico.ico">
 </head>
 <body>
-
   <header id="about-header">
     <div class="about-container">
       <nav id="main-nav">
         <a href="#" class="logo-lead">
           <img src="/img/logo-img.jpg" alt="politico" class="logo"><span class="logo-text">theElections</span>
         </a>
-        <ul>
+        <ul class="list">
           <li><a href="index.html">Home</a></li>
           <li><a href="login.html" class="current">Login</a></li>
           <li><a href="result.html">Check Result</a></li>
@@ -28,100 +28,103 @@
     </div> 
   </header>
 
-  <section-a id="admin-section">
-    <div class="left-text blue-gray-text top-profile flex-center">
-      <div class="profile-menu">
-        <h2>
-          <span>Wellcome!</span>
-          <span id="adim-name">Richy Asika</span>
-        </h2>
-        <div class="">
+  <section id="admin-body">
+    <div id="admin-section">
+      <div class="admin-menu">
+        <h2>Wellcome!</h2>
+        <p id="adim-name">Richy Asika</p>
+        <div class="links">
           <a href="create-office.html" class="button">Create Government Office</a>
-          <a href="create-party.html" class="button">Create New Party</a>
+            <a href="create-party.html" class="button btn2">Create New Party</a>
         </div>
       </div>
     </div>
-  </section>
-  <!-- PLITICAL PARTIES  -->
-  <section-b class="pol-table">
-    <div class="">
-      <h1 class="centered-text biggest-text">
-        Political Parties
-      </h1>
-      <table class="">
-        <tr>
-          <th>logo</th>
-          <th>Party Name</th>
-          <th>head quarter Address</th>
-          <th>action</th>
-        </tr>
-        <tr>
-          <td><img src="../img/adp.jpg" class=""> </td>
-          <td> Action Democratic Party</td>
-          <td>Lagos State</td>
-          <td>
-            <a href="" class="">edit</a>
-            <a href="#delete" data-target="" class="">delete</a>
-          </td>
-        </tr>
-        <tr>
-          <td><img src="../img/adp.jpg" class=""> </td>
-          <td> Action Democratic Party</td>
-          <td>Lagos State</td>
-          <td>
-            <a href="" class="">edit</a>
-            <a href="#delete" data-target="" class="">delete</a>
-          </td>
-        </tr>
-        <tr>
-          <td><img src="../img/adp.jpg" class=""> </td>
-          <td> Action Democratic Party</td>
-          <td>Lagos State</td>
-          <td>
-            <a href="">edit</a>
-            <a href="" data-target="">delete</a>
-          </td>
-        </tr>
-      </table>
+    <br>
+    <br>
+    <!-- PLITICAL PARTIES  -->
+    <div id="political party">
+      <div class="party-menu">
+        <h1 class="party-header">
+          Political Parties
+        </h1>
+        
+        <table class="table">
+          <tr>
+            <th>logo</th>
+            <th>Party Name</th>
+            <th>head quarter Address</th>
+            <th>action</th>
+          </tr>
+          <tr>
+            <td><img src="./img/ACCORD.jpg" class=""></td>
+            <td> People Democratic Party</td>
+            <td>Lagos State</td>
+            <td>
+              <a href="" class="">edit</a>
+              <a href="#delete" data-target="" class="">delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="./img/PDP.png" class=""> </td>
+            <td> Accord</td>
+            <td>Lagos State</td>
+            <td>
+              <a href="" class="">edit</a>
+              <a href="#delete" data-target="" class="">delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="./img/ADC2.jpg" class=""> </td>
+            <td> A</td>
+            <td>Lagos State</td>
+            <td>
+              <a href="">edit</a>
+              <a href="" data-target="">delete</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  
+    <div id="government party">
+      <div class="party-menu">
+        <h1 class="party-header">
+          Government Office
+        <h1>
+        <table class="table">
+          <tr>
+            <th>ID</th>
+            <th>office type</th>
+            <th>office name</th>
+            <th>action</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>federal</td>
+            <td>Senate</td>
+            <td>
+              <a href="#delete" data-target="" class="">delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>state</td>
+            <td>house of rep.</td>
+            <td>
+              <a href="#delete" data-target="" class="">delete</a>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
   </section>
 
-  <section-b id="gov-table">
-    <div class="">
-      <h1 class="centered-text biggest-text">
-        Government Office
-      <h1>
-      <table class="">
-        <tr>
-          <th>ID</th>
-          <th>office type</th>
-          <th>office name</th>
-          <th>action</th>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>federal</td>
-          <td>Senate</td>
-          <td>
-            <a href="#delete" data-target="" class="">delete</a>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>state</td>
-          <td>house of rep.</td>
-          <td>
-            <a href="#delete" data-target="" class="">delete</a>
-          </td>
-        </tr>
-      </table>
-    </div>
-  </section>
-
-  <footer id="main-footer">
+  <!-- <footer id="main-footer">
     <div class="footer-text">
       <p>copywrite &copy 2023 Election Poll By Maureen Uzezi Ozakpumue</p>
     </div>
-  </footer>
+  </footer> -->
+
+  <script src=""></script>
 </body>
 </html>

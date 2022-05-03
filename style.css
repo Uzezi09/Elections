@@ -23,6 +23,20 @@ body{
   /* width: 100%; */
 }
 
+nav .toggle-bar{
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  
+}
+
+.toggle-line {
+  height: 0.12rem;
+  width: 3rem;
+ border: 1px solid red;
+  margin: 2px;
+}
+
 a{
   text-decoration: none;
   color:#fff;
@@ -69,6 +83,7 @@ li{
 }
 
 #main-nav{
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding-top: 1rem;
@@ -251,3 +266,63 @@ textarea:focus{
   padding: 0.1rem;
   border-radius: 0.6rem;
 }
+
+
+
+
+@media(max-width:500px){
+  .container{
+    padding: 0.5rem;
+  }
+
+  #main-nav{
+    position: absolute;
+  } 
+
+  #main-nav ul{
+    display: none;
+  }
+
+  nav .toggle-bar{
+    display: flex;
+    flex-direction: column;
+  } 
+  
+  .logo{
+    height: 35px;
+    width: 35px;
+  }
+
+  a{
+    color:#333;
+    border-bottom: 2px transparent solid;
+    padding-bottom: 0.1rem;
+    transition: border-color 0.5s;
+    font-size: 0.8rem;
+    font-weight: 150;
+  }
+  li{
+    list-style: none;
+    padding: 0.4rem;
+  }
+  .logo-text{
+    display: none;
+  }
+
+  .header-content{
+    padding-top: 40%;
+  }
+
+  .header-content h1{
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+  
+  .header-content p{
+    margin-bottom: 1.3rem;
+  }
+
+  #register-form .form-input{
+    max-width: 350px;
+  }
+} 
