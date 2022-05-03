@@ -8,7 +8,7 @@ const secPassWord = document.querySelector('#password2');
 
 const regForm = document.getElementById('reg-form');
 
-regForm.addEventListener('submit',  (e)=> {
+regForm.addEventListener('click',  (e)=> {
   // console.log('hello')
 
   // validate form 

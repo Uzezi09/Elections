@@ -21,8 +21,9 @@
         </a>
         <ul class="list">
           <li><a href="index.html">Home</a></li>
-          <li><a href="login.html" class="current">Login</a></li>
+          <li><a href="login.html">Login</a></li>
           <li><a href="result.html">Check Result</a></li>
+          <li><a href="/ADMIN/Admin.html" class="current">Admin</a></li>
         </ul>
       </nav>
     </div> 
@@ -39,8 +40,7 @@
         </div>
       </div>
     </div>
-    <br>
-    <br>
+  
     <!-- PLITICAL PARTIES  -->
     <div id="political party">
       <div class="party-menu">
@@ -61,7 +61,7 @@
             <td>Lagos State</td>
             <td>
               <a href="" class="">edit</a>
-              <a href="#delete" data-target="" class="">delete</a>
+              <a href="#delete" class="myBtn">delete</a>
             </td>
           </tr>
           <tr>
@@ -70,7 +70,7 @@
             <td>Lagos State</td>
             <td>
               <a href="" class="">edit</a>
-              <a href="#delete" data-target="" class="">delete</a>
+              <a href="#delete" class="myBtn">delete</a>
             </td>
           </tr>
           <tr>
@@ -79,7 +79,7 @@
             <td>Lagos State</td>
             <td>
               <a href="">edit</a>
-              <a href="" data-target="">delete</a>
+              <a href="" class="myBtn">delete</a>
             </td>
           </tr>
         </table>
@@ -90,28 +90,37 @@
       <div class="party-menu">
         <h1 class="party-header">
           Government Office
-        <h1>
+        </h1>
+
         <table class="table">
           <tr>
-            <th>ID</th>
+            <th>id</th>
             <th>office type</th>
             <th>office name</th>
             <th>action</th>
           </tr>
           <tr>
             <td>1</td>
-            <td>federal</td>
-            <td>Senate</td>
+            <td>Federal</td>
+            <td>President</td>
             <td>
-              <a href="#delete" data-target="" class="">delete</a>
+              <a href="#delete"  class="myBtn">delete</a>
             </td>
           </tr>
           <tr>
             <td>2</td>
-            <td>state</td>
-            <td>house of rep.</td>
+            <td>State</td>
+            <td>House of rep.</td>
             <td>
-              <a href="#delete" data-target="" class="">delete</a>
+              <a href="#delete" class="myBtn">delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>State</td>
+            <td>House of rep.</td>
+            <td>
+              <a href="#" class="myBtn">delete</a>
             </td>
           </tr>
         </table>
@@ -119,12 +128,25 @@
     </div>
   </section>
 
-  <!-- <footer id="main-footer">
+  <!-- Delete Modal -->
+  <div id="modal" class="modal">
+
+    <!-- modal content  -->
+    <div class="modal-content">
+      <!-- <span class="close">x</span> -->
+      <h3>Are you sure you want to delete?</h3>
+      <button class="modal-btn btn-green btn success succ-text"> Yes,Delete</button>
+      <button class="modal-btn btn-dark btn close"> No, Cancel</button>
+    </div>
+  </div>
+
+
+  <footer id="main-footer">
     <div class="footer-text">
       <p>copywrite &copy 2023 Election Poll By Maureen Uzezi Ozakpumue</p>
     </div>
-  </footer> -->
+  </footer>
 
-  <script src=""></script>
+  <script src="admin.js"></script>
 </body>
 </html>
