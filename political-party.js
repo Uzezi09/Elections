@@ -7,7 +7,7 @@ const politicalParty = [
   
   },
   {
-    logoUrl: 'https://dailypost.ng/wp-content/uploads/2021/02/PDP-1200x720.jpg',
+    logoUrl: 'https://cdn.punchng.com/wp-content/uploads/2019/07/13173835/PDP-logo-e1563035957817.jpg',
     name: 'PDP ',
     hqAddress: 'Lagos State',
     id: 2

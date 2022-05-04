@@ -1,0 +1,47 @@
+#gov-office{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  margin: 2rem auto;
+  width: 1000px;
+  /* height: auto; */
+  /* flex-wrap: wrap; */
+}
+
+.gov-office img{
+  width: 70%;
+  height: 60%;
+  margin: 0.3rem 2rem;
+}
+
+.gov-office{
+  width: 220px;
+  padding: 0.2rem;
+  margin: 0 0.1rem;
+  box-shadow: 0px 0px 5px rgb(10, 241, 122);;
+}
+
+/* media  */
+@media(max-width:570px){
+  #polPty, #gov-office{
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+  
+  .polPty, .gov-office{
+    width: 170px;
+    margin: 0 auto;
+  }
+}
+
+@media(min-width:571px) and (max-width:768px){
+  #polPty, #gov-office{
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+  }
+  
+  .polPty, .gov-office{
+    width: 170px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,58 @@
+#result{
+  background: #fff;
+  padding: 0.05rem;
+  width: 90%;
+  margin: 1.5rem auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#party .result-menu{
+  margin-top: 3rem;
+  align-content: center;
+}
+
+.result-header{
+  font-size: 2.4rem;
+  margin: 4rem 0 0;
+  text-align: center;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+table, th, td {
+  border: 1px solid;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-top: none;
+  border-left: none;
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  border: none;
+  height: 30%;
+  margin: 2rem auto;
+  margin-bottom: 1rem;
+  background: #ffffff;
+  box-shadow: 0px 0px 5px rgb(10, 241, 122);
+  border-radius: 3px;
+}
+
+th {
+  height: 20px;
+  text-transform: uppercase;
+  border-right: none;
+}
+
+td {
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+td:last-child{
+  border-right: none;
+} 
+

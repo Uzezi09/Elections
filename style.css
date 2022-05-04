@@ -36,11 +36,6 @@ nav .toggle-bar{
   margin: 2px;
 }
 
-/* .active{
-  display: block;
-  background: pink;
-} */
-
 a{
   text-decoration: none;
   color:#fff;
@@ -222,9 +217,10 @@ select:focus{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
-  margin: 1rem auto;
-  max-width: 1000px;
-  height: auto;
+  margin: 2rem auto;
+  width: 1000px;
+  /* height: auto; */
+  /* flex-wrap: wrap; */
 }
 
 .polPty img{
@@ -305,20 +301,20 @@ textarea:focus{
     font-size: 0.8rem;
     font-weight: 150;
   }
-  li{
-    list-style: none;
-    padding: 0.4rem;
+
+  #header-home{
+    height: 50vh;
   }
   .logo-text{
     display: none;
   }
 
   .header-content{
-    padding-top: 40%;
+    padding-top: 50%;
   }
 
   .header-content h1{
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 1;
   }
   
@@ -330,3 +326,13 @@ textarea:focus{
     max-width: 350px;
   }
 } 
+
+@media(min-width:571px) and (max-width:768px){
+  .header-content h1{
+    font-size: 2rem;
+  }
+
+  a{
+    font-size: 0.7rem;
+  }
+}
