@@ -1,0 +1,84 @@
+body {
+  background-color: #00875140;
+  background-size: cover;
+  background-position: 0%;
+  list-style: 1.2;
+}
+
+.vote-word{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 1rem ;
+  padding-bottom: 0.5rem;
+}
+
+.vote-word h2{
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.vote-word h3{
+  font-size: 1.5rem;
+  font-weight: 200;
+  font-family:sans-serif
+}
+
+.vote-content{
+  margin: 2rem 0;
+}
+
+.vote-header{
+  text-transform: uppercase;
+  margin: 0.5rem;
+}
+
+.candidate-details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 1rem;
+}
+
+.candidate-profile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  width: 200px;
+  height: 260px;
+  margin: 0 auto;
+  /* border-radius: 0% 15% 0% 15%; */
+  box-shadow: 0px 0px 5px rgb(10, 241, 122);
+  background: #FFF;
+}
+
+.box-b{
+  border-radius: 0 15% 0 15%;
+}
+
+.box-a{
+  border-radius: 15% 0 15% 0;
+}
+
+.image {
+  height: 150px;
+  width: 160px;
+  border-radius: 2%;
+}
+
+.candidate-profile button {
+  background-color: #008756;
+  padding: 0.5rem;
+  border-radius: 7px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.candidate-profile button:hover {
+  font-size: 15px;
+}
