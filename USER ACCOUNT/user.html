@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="result.css">
+  <link rel="stylesheet" href="user.css">
   <title>2023 Election</title>
   <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico.ico">
 </head>
@@ -20,62 +20,50 @@
           <img src="../img/logo-img.jpg" alt="politico" class="logo"><span class="logo-text">theElections</span>
         </a>
         <ul class="list">
-          <li><a href="./main-home.html" >Home</a></li>
-          <li><a href="./login.html">Login</a></li>
+          <li><a href="../main-home.html" >Home</a></li>
+          <li><a href="../login.html">Login</a></li>
           <li><a href="../ADMIN/Admin.html">Admin</a></li>
           <li><a href="../VOTE/vote.html">vote</a></li>
           <li><a href="../RESULT/result.html">Result</a></li>
-          <li><a href="./petition.html">Petition</a></li>
+          <li><a href="../petition.html">Petition</a></li>
           <li><a href="../applicationform.html">Apply for office</a></li>
-          <li><a href="../USER ACCOUNT/user.html">User Account</a></li>
         </ul>
       </nav>
     </div> 
   </header>
 
-  <section id="result">
-    <div class="result-menu">
-      <h1 class="result-header">
-        Results
-      </h1>
-      
-      <table class="table">
-        <tr>
-          <th>Candidate</th>
-          <th>Office Type</th>
-          <th>Party Name</th>
-          <th>Number of Votes</th>
-          <th>Result</th>
-        </tr>
-        <tr>
-          <td>Richy Asika</td>
-          <td>Federal</td>
-          <td>senate</td>
-          <td>100</td>
-          <td>won</td>
-        </tr>
-        <tr>
-          <td>Richard Nwachukwu</td>
-          <td>Federal</td>
-          <td>President</td>
-          <td>307</td>
-          <td>won</td>
-        </tr>
-        <tr>
-          <td>Yakubu Adams</td>
-          <td>Local Government</td>
-          <td>chairman</td>
-          <td>256</td>
-          <td>lost</td>
-        </tr>
-        <tr>
-          <td>Ishaya Isah</td>
-          <td>State</td>
-          <td>Governor</td>
-          <td>697</td>
-          <td>lost</td>
-        </tr>
-      </table>
+  <section id="user-body">
+    <div class="user-body">
+      <div class="user-content">
+        <h2>Wellcome!</h2>
+        <p id="user-name">Richy Asika</p>
+        <hr>
+      </div>
+    </div>
+  </section> 
+
+  <section id="voted">
+    <div class="voted">
+      <div class="voted-header">
+        <h3>Candidate you have voted for</h3>
+      </div>
+      <div class="candidate-voted">
+        <div class="candidate-details">
+          <img src="./img/img1.jpg"  class="img" alt="">
+          <h3>Yakubu Isah</h3>
+          <p>President</p>
+        </div>
+        <div class="candidate-details">
+          <img src="./img/img1.jpg"  class="img" alt="">
+          <h3>Umar Musa</h3>
+          <p>senate</p>
+        </div>
+        <div class="candidate-details">
+          <img src="./img/img1.jpg"  class="img" alt="">
+          <h3>Salome Musty</h3>
+          <p>Governor</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -84,5 +72,7 @@
       <p>copywrite &copy 2023 Election Poll By Maureen Uzezi Ozakpumue</p>
     </div>
   </footer>
+
+  <script src="admin.js"></script>
 </body>
 </html>
