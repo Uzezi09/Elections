@@ -212,3 +212,26 @@ td:last-child{
   color: #333333;
   background:#f4cccc;
 }
+
+
+/* media  */
+@media(max-width: 500px){
+  #admin-section{
+    height: 12rem;
+    width: 85%;
+    box-shadow: none;
+  }
+
+  #admin-body .links{
+    flex-direction: column;
+    margin: 0;
+  }
+
+  #admin-body .button{
+    padding: 0.3rem;
+  }
+
+  table{
+    width: 90%;
+  }
+}
