@@ -1,19 +1,25 @@
+body{
+  background-color: #00875140;
+}
+
 #result{
   background: #fff;
   padding: 0.05rem;
-  width: 90%;
-  margin: 1.5rem auto;
+  width: 80%;
+  margin: 5rem auto;
   font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0px 0px 5px rgb(10, 241, 122);
+  border-radius: 0 15% 0 15%;
 }
 
 #party .result-menu{
-  margin-top: 3rem;
+  margin-top: 1rem;
   align-content: center;
 }
 
 .result-header{
   font-size: 2.4rem;
-  margin: 4rem 0 0;
+  margin: 2rem 0 0;
   text-align: center;
   color: #333333;
   text-transform: uppercase;
