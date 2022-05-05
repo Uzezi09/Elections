@@ -143,13 +143,44 @@
 
   <!-- Delete Modal -->
   <div id="modal" class="modal">
-
-    <!-- modal content  -->
     <div class="modal-content">
-      <!-- <span class="close">x</span> -->
       <h3>Are you sure you want to delete?</h3>
       <button class="modal-btn btn-green btn success succ-text"> Yes,Delete</button>
       <button class="modal-btn btn-dark btn close"> No, Cancel</button>
+    </div>
+  </div>
+
+  <!-- The Modal Edit Profile -->
+  <div id="edit-modal" class="edit-modal">
+    <div class="edit-modal-content">
+      <form action="">
+        <h3 class="edit-modal-header">Update Profile</h3>
+        <hr/>
+        <div class="field">
+          <label for="firstname">First Name:</label>
+          <input type="text" name="firstname" id="firstname" placeholder="firstname" required>
+        </div>
+
+        <div class="field">
+          <label for="lastname">Last Name:</label>
+          <input type="text" name="lastname" id="lastname" placeholder="lastname" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" placeholder="123@gmail.com" required>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone Number:</label>
+          <input type="phone" name="phone" id="phone" placeholder="phone: 08145467267" required>
+        </div>
+        <div class="field">
+          <label for="profile-logo">Profile Logo:</label>
+          <input type="file" name="profile-logo" id="profile-logo" required>
+        </div>
+        <button type="submit" class="edit-btn">Update Profile</button>
+      </form>
     </div>
   </div>
 
