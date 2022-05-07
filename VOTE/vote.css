@@ -54,14 +54,6 @@ body {
   background: #FFF;
 }
 
-.box-b{
-  border-radius: 0 15% 0 15%;
-}
-
-.box-a{
-  border-radius: 15% 0 15% 0;
-}
-
 .image {
   height: 150px;
   width: 160px;
