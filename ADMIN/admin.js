@@ -51,3 +51,34 @@ window.onclick = function(event) {
     editModal.style.display = "none";
   }
 }
+
+// EVENT FOR CREATE NEW GOV BTN
+const newgovModal = document.getElementById("newgov-modal");
+const govModalBtn = document.getElementById("govModal-btn");
+const newgovBtn = document.querySelector(".newgov-btn")
+
+govModalBtn.addEventListener('click', function () {
+    newgovModal.style.display = 'block';
+});
+
+// when you click anywhere outside the modal 
+newgovBtn.addEventListener('click', function () {
+  newgovModal.style.display = 'none';
+}) 
+
+
+// EVENT FOR CREATE NEW PARTY
+const newptyModal = document.getElementById("newpty-modal");
+const ptyModalBtn = document.getElementById("ptyModal-btn");
+const newptyBtn = document.querySelector(".newpty-btn")
+
+ptyModalBtn.addEventListener('click', function () {
+  newptyModal.style.display = 'block';
+});
+
+// when you click anywhere outside the modal 
+newptyBtn.addEventListener('click', function (e) {
+  newptyModal.style.display = 'none';
+
+  e.preventDefault()
+}) 

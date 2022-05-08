@@ -19,3 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 }); 
 
+ <div class="field">
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" placeholder="123@gmail.com" required>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone Number:</label>
+          <input type="phone" name="phone" id="phone" placeholder="phone: 08145467267" required>
+        </div>
+        <div class="field">
+          <label for="profile-logo">Profile Logo:</label>
+          <input type="file" name="profile-logo" id="profile-logo" required>
+        </div>

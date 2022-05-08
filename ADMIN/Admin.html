@@ -32,21 +32,20 @@
       </nav>
     </div> 
   </header>
-
+   
   <section id="admin-body">
     <div id="admin-section">
       <div class="admin-menu">
         <h2>Wellcome!</h2>
         <p id="adim-name">Richy Asika</p>
         <div class="links">
-          <a href="create-office.html" class="button">Create Government Office</a>
-            <a href="create-party.html" class="button btn2">Create New Party</a>
+          <a href="#" class="button" id="govModal-btn">Create Government Office</a>
+            <a href="#" class="button btn2" id="ptyModal-btn">Create New Party</a>
         </div>
       </div>
     </div>
-  
-    <!-- PLITICAL PARTIES  -->
-    <div id="political party">
+     <!-- PLITICAL PARTIES  -->
+     <div id="political party">
       <div class="party-menu">
         <h1 class="party-header">
           Political Parties
@@ -154,36 +153,72 @@
   <div id="edit-modal" class="edit-modal">
     <div class="edit-modal-content">
       <form action="">
-        <h3 class="edit-modal-header">Update Profile</h3>
+        <h3 class="edit-modal-header">Update Party</h3>
         <hr/>
         <div class="field">
-          <label for="firstname">First Name:</label>
-          <input type="text" name="firstname" id="firstname" placeholder="firstname" required>
+          <label for="officename">Party Name:</label>
+          <input type="text" name="officename" id="officename" placeholder="officename" required>
         </div>
 
         <div class="field">
-          <label for="lastname">Last Name:</label>
-          <input type="text" name="lastname" id="lastname" placeholder="lastname" required>
+          <label for="hqaddress">Head office address:</label>
+          <input type="text" name="hqaddress" id="hqaddress" placeholder="hqaddress" required>
         </div>
 
         <div class="field">
-          <label for="email">Email:</label>
-          <input type="email" name="email" id="email" placeholder="123@gmail.com" required>
+          <label for="logo">logo:</label>
+          <input type="file" name="logo" id="logo" placeholder="logo" required>
         </div>
-
-        <div class="field">
-          <label for="phone">Phone Number:</label>
-          <input type="phone" name="phone" id="phone" placeholder="phone: 08145467267" required>
-        </div>
-        <div class="field">
-          <label for="profile-logo">Profile Logo:</label>
-          <input type="file" name="profile-logo" id="profile-logo" required>
-        </div>
-        <button type="submit" class="edit-btn">Update Profile</button>
+        <button type="submit" class="edit-btn">Update Party</button>
       </form>
     </div>
   </div>
 
+  <!-- The create gov modal -->
+  <div class="newgov-modal" id="newgov-modal">
+    <div class="newgov-modal-content">
+      <form action="">
+        <h3 class="newpty-modal-header">Create New Office</h3>
+        <hr/>
+        <div class="field">
+          <label for="officetype">Office Type:</label>
+          <input type="text" name="officetype" id="officetype" placeholder="officetype" required>
+        </div>
+
+        <div class="field">
+          <label for="officename">Office Name:</label>
+          <input type="file" name="officename" id="officename" placeholder="officename" required>
+        </div>
+        <button type="submit" class="newgov-btn">Create Office</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- The create new party modal -->
+  <div id="newpty-modal" class="newpty-modal">
+    <div class="newpty-modal-content">
+      <form action="">
+        <h3 class="newpty-modal-header">Create New Party</h3>
+        <hr/>
+        <div class="field">
+          <label for="officename">Party Name:</label>
+          <input type="text" name="officename" id="officename" placeholder="officename" required>
+        </div>
+
+        <div class="field">
+          <label for="hqaddress">Head office address:</label>
+          <input type="text" name="hqaddress" id="hqaddress" placeholder="hqaddress" required>
+        </div>
+
+        <div class="field">
+          <label for="logo">logo:</label>
+          <input type="file" name="logo" id="logo" placeholder="logo" required>
+        </div>
+        <button type="submit" class="newpty-btn">Create Party</button>
+      </form>
+    </div>
+  </div>
+ 
 
   <footer id="main-footer">
     <div class="footer-text">
