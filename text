@@ -32,3 +32,85 @@ document.addEventListener('DOMContentLoaded', () => {
           <label for="profile-logo">Profile Logo:</label>
           <input type="file" name="profile-logo" id="profile-logo" required>
         </div>
+
+        // const submit = document.getElementById('submit')
+// const candidateParty = document.getElementById("candidate-party");
+// const candidateOffice = document.querySelector("#candidate-office");
+
+const subBtn = document.querySelector("#submit");
+
+const selectParty = document.querySelector("#party__name");
+const selectOffice = document.querySelector("#political__office");
+
+const token = localStorage.getItem("token");
+
+subBtn.addEventListener("click", async (event) => {
+  event.preventDefault();
+
+  const myOffice = parseInt(selectOffice.value);
+  const myParty = parseInt(selectParty.value);
+
+  const urlencoded = new URLSearchParams();
+  urlencoded.append('party', myParty)
+  urlencoded.append("office", myOffice);
+
+  const response = await fetch(`http://localhost:4000/candidate/add`, {
+    method: "POST",
+    body: urlencoded,
+    headers: {
+      authorization: `Bearer ${token}`,
+    },
+  });
+
+  const result = await response.json();
+
+  console.log([...urlencoded])
+  console.log(result)
+
+});
+
+const options = (obj, parent) => {
+  const option = document.createElement("option");
+  option.setAttribute("value", obj.id);
+  option.textContent = obj.name;
+
+  parent.appendChild(option);
+};
+
+const generateData = () => {
+  officeList.forEach((office) => {
+    options(office, selectOffice);
+  });
+
+  partyList.forEach((party) => {
+    options(party, selectParty);
+  });
+};
+
+let officeList = [];
+let partyList = [];
+const fetchData = async () => {
+  const response = await fetch(`http://localhost:4000/office/`, {
+    method: "GET",
+    headers: {
+      authorization: `Bearer ${token}`,
+    },
+  });
+  const result = await response.json();
+  const offItems = result.data;
+  officeList = [...offItems];
+
+  const resParty = await fetch(`http://localhost:4000/party/`, {
+    method: "GET",
+    headers: {
+      authorization: `Bearer ${token}`,
+    },
+  });
+  const partyResult = await resParty.json();
+  partyList = [...partyResult.data];
+
+  generateData();
+
+  console.log(offItems);
+};
+fetchData();

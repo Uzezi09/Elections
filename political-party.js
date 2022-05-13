@@ -1,4 +1,4 @@
-const politicalParty = [
+let politicalParty = [
   {
     logoUrl: 'https://tribuneonlineng.com/wp-content/uploads/2019/03/AAC-1.jpg',
     name: 'AAC',
@@ -38,6 +38,28 @@ const politicalParty = [
   }
 ]
 
+async function partyData() {
+  const token = localStorage.getItem('token')
+
+  const partyData = await fetch('http://localhost:7000/party', {
+    method: 'GET',
+    headers: {
+      authorization: `Bearer ${token}`
+    }
+  })
+
+  const response = await partyData.json()
+
+  politicalParty = [
+    ...response.data
+  ]
+
+  for (let party of politicalParty) {
+    polPty.appendChild(createParty(party));
+  } 
+}
+partyData()
+
 
 const polPty = document.getElementById('polPty');
 
@@ -50,15 +72,17 @@ function createParty(party) {
   const text = document.createElement('div')
   text.className = 'text';
   text.innerText = `Name: ${party.name} \n Address: ${party.hqAddress}`;
-  // Office ID: ${party.id}
-
   polPty.appendChild(text);
-  return polPty;
-  
+  const partyId = document.createElement('div')
+  partyId.className = 'partyid'
+  partyId.innerText = `Office ID: ${party.id}`
+  partyId.style.display = "none"
+  polPty.appendChild(partyId);
+
+  return polPty; 
 }
 
 
-
-for (let party of politicalParty) {
-  polPty.appendChild(createParty(party));
-}
+// for (let party of politicalParty) {
+//   polPty.appendChild(createParty(party));
+// }

@@ -33,30 +33,27 @@
   </header>
 
   <section id="register-form">
-				<form action="petitionlist.html" method="post" class="form-input">
-          <h1 class="form-title">Petition Form</h1>
-          <div class="input-form">
-            <label for="firstname">Party Name:</label>
-            <input class="text" type="text" name="Partyname" placeholder="" required="">
-          </div>
-          <div class="input-form">
-            <label for="address">Address:</label>
-            <input class="text" type="text" name="Address" placeholder="" required="">
-          </div>
-          <div class="input-form">
-            <label for="email">Email:</label>
-            <input class="text" type="text" name="email" placeholder="" required="">
-          </div>
-          <div class="input-form">
-            <label for="phonenumber">Phonenumber:</label>
-            <input class="text" type="text" name="Phonenumber" placeholder="" required="">
-          </div>
-          <div class="input-form">
-            <label for="about">Petition:</label>
-            <textarea class="text" id="about" name="About" placeholder="" required=""></textarea>
-          </div>     
-					<div class="clear"> </div>
-					<button type="submit" class="btn btn-m">Submit</button>
+		<form action="" method="" class="form-input">
+      <h1 class="form-title">Petition Form</h1>
+      
+      <div class="input-form">
+        <label for="address">Office:</label>
+        <input id="office-id" type="text required>
+      </div>
+          
+      <div class="input-form">
+        <label for="createdBy">Created By:</label>
+        <input id="createdBy" type="text" required>
+      </div>
+      <div class="input-form">
+        <label for="about">Body:</label>
+        <textarea type="text" id="body" required></textarea>
+      </div>     
+      <div class="input-form">
+        <label for="about">Evidence:</label>
+         <input type="file" id="file102" required>
+      </div>     
+				<button type="submit" id="petBtn" class="btn btn-m">Submit</button>
 				</form>
 			</div>
 		</div>
@@ -67,5 +64,7 @@
       <p>copywrite &copy 2023 Election Poll By Maureen Uzezi Ozakpumue</p>
     </div>
   </footer>
+
+  <script src="petition.js"></script>
 </body>
 </html>

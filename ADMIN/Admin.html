@@ -39,8 +39,11 @@
         <h2>Wellcome!</h2>
         <p id="adim-name">Richy Asika</p>
         <div class="links">
-          <a href="#" class="button" id="govModal-btn">Create Government Office</a>
-            <a href="#" class="button btn2" id="ptyModal-btn">Create New Party</a>
+          <!-- <a href="#" class="button" id="govModal-btn">Create Government Office</a> -->
+          <button class="button" id="govModal-btn">Create Government Office</button>
+            <!-- <a href="#" class="button btn2" id="ptyModal-btn">Create New Party</a>-->
+
+            <button class="button btn2" id="ptyModal-btn">Create new party</button>
         </div>
       </div>
     </div>
@@ -182,14 +185,25 @@
         <hr/>
         <div class="field">
           <label for="officetype">Office Type:</label>
-          <input type="text" name="officetype" id="officetype" placeholder="officetype" required>
+          <!-- <input type="text"> -->
+          <select name="officetype" id="officetype">
+            <option default>-- Select Record Type --</option>
+            <option >state</option>
+            <option >local government </option>
+            <option >legislative</option>
+          </select>
         </div>
 
         <div class="field">
           <label for="officename">Office Name:</label>
-          <input type="file" name="officename" id="officename" placeholder="officename" required>
+          <input type="text" name="officename" id="officename2" placeholder="officename" required>
         </div>
-        <button type="submit" class="newgov-btn">Create Office</button>
+
+        <div class="field">
+          <label for="officename">logUrl:</label>
+          <input type="file" name="logo" id="logo" placeholder="logo" required>
+        </div>
+        <button type="submit" class="newgov-btn fives" id="newgov-btn12">Create Office</button>
       </form>
     </div>
   </div>
@@ -198,23 +212,23 @@
   <div id="newpty-modal" class="newpty-modal">
     <div class="newpty-modal-content">
       <form action="">
-        <h3 class="newpty-modal-header">Create New Party</h3>
+        <h3 class="newpty-modal-header" >Create New Party</h3>
         <hr/>
         <div class="field">
           <label for="officename">Party Name:</label>
-          <input type="text" name="officename" id="officename" placeholder="officename" required>
+          <input type="text" name="partyname" id="partyname" placeholder="partyname" required>
         </div>
 
         <div class="field">
           <label for="hqaddress">Head office address:</label>
-          <input type="text" name="hqaddress" id="hqaddress" placeholder="hqaddress" required>
+          <input type="text" name="hqaddress" id="hqaddress11" placeholder="hqaddress" required>
         </div>
 
         <div class="field">
           <label for="logo">logo:</label>
-          <input type="file" name="logo" id="logo" placeholder="logo" required>
+          <input type="file" name="file" id="file" placeholder="logo" required>
         </div>
-        <button type="submit" class="newpty-btn">Create Party</button>
+        <button type="submit" id= "newpty-btn party12" class="newpty-btn">Create Party</button>
       </form>
     </div>
   </div>
@@ -227,5 +241,7 @@
   </footer>
 
   <script src="admin.js"></script>
+  <script src="../GOVERMENT/government-party.js"></script>
+  <script src="../political-party.js"></script>
 </body>
 </html>

@@ -33,31 +33,33 @@
   </header>
 
   <section id="register-form">
-    <div class="application-form">
-      <form action="petitionlist.html" method="post" class="form-input">
+    <div class="">
+      <form action="" method="" class="form-input">
         <h1>Application For Office</h1>
 
         <div class="input-field">
-          <label class="tag" for="party-name">Party Name</label>
-          <select class="text" type="text" id="candidate-party" name="candidate-party" required>
+          <label class="tag" for="office-name">Select Office</label>
+          <select class="text" type="text" id="apply-office" required>
             <option default>-- Select Record Type --</option>
-            <option value="PDP">PDP</option>
-            <option value="ACCORD">ACCORD</option>
-            <option value="APC">APC</option>
-            <option value="APDA">APDA</option>
+            <option>federal</option> -->
+            <option>state</option>
+            <option>legislative</option>
           </select>
         </div>
         <div class="input-field">
-          <label class="tag" for="office-name">Select Office</label>
-          <select class="text" type="text" id="candidate-office" name="candidate-office" required>
+          <label class="tag" for="party-name">Select Office Name</label>
+          <select class="text" type="text" id="apply-name" required>
             <option default>-- Select Record Type --</option>
-            <option value="Federal Government">Federal Government</option>
-            <option value="State Government">State Government</option>
-            <option value="Legislative">Legislative</option>
-            <option value="Local Government">Local Government</option>
+            <option>president</option>
+            <option>senate</option>
+            <option> governor</option>
           </select>
         </div>
-        <button type="submit" class="btn btn-m">Submit</button>
+        <div class="input-field">
+          <label for="about">logo:</label>
+           <input type="file" id="file45" required></textarea>
+        </div>   
+        <button type="submit" id="submit23" class="btn btn-m">Submit</button>
       </form>
     </div>
   </section>
@@ -67,5 +69,7 @@
       <p>copywrite &copy 2023 Election Poll By Maureen Uzezi Ozakpumue</p>
     </div>
   </footer>
+
+  <script src="apply.js"></script>
 </body>
 </html>

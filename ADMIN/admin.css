@@ -246,7 +246,7 @@ td:last-child{
 .newpty-modal input{
   display: block;
   width: 100%;
-  height: 2.3rem;
+  height: 2.5rem;
   padding: 0.7rem;
   border: 0.08rem solid #008751;
   border-radius: 0.6rem;
@@ -264,9 +264,23 @@ td:last-child{
   border: 1px solid #008751;
 }
 
+.newgov-modal select{
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.7rem;
+  border: 0.08rem solid #008751;
+  border-radius: 0.6rem;
+}
+
+.newgov-modal option{
+  padding: 0.3rem;
+  /* text-transform: uppercase; */
+}
+
+
 ::placeholder{
   padding: 0.3rem;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .edit-btn,
