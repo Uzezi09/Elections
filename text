@@ -114,3 +114,248 @@ const fetchData = async () => {
   console.log(offItems);
 };
 fetchData();
+
+<div id="government party">
+      <div class="party-menu">
+        <h1 class="party-header">
+          Government Office
+        </h1>
+<!-- 
+        <table class="table">
+          <tr>
+            <th>id</th>
+            <th>office type</th>
+            <th>office name</th>
+            <th>action</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Federal</td>
+            <td>President</td>
+            <td>
+              <a href="#delete"  class="myBtn">delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>State</td>
+            <td>House of rep.</td>
+            <td>
+              <a href="#delete" class="myBtn">delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Local Government</td>
+            <td>Chairman</td>
+            <td>
+              <a href="#" class="myBtn">delete</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section > -->
+    
+
+  {/* polPty  */ }
+  <div id="admin-section">
+      <div class="admin-menu">
+        <h2>Wellcome!</h2>
+        <p id="adim-name">Richy Asika</p>
+        <div class="links">
+        
+        <button class="button" id="govModal-btn">Create Government Office</button>
+
+        <button class="button btn2" id="ptyModal-btn">Create new party</button>
+      </div>
+    </div>
+     <!-- PLITICAL PARTIES  -->
+    <div id="political party">
+      <div class="party-menu">
+        <h1 class="party-header">
+          Political Parties
+        </h1>
+        
+        <table class="table">
+          <tr>
+            <th>logo</th>
+            <th>Party Name</th>
+            <th>head quarter Address</th>
+            <th>action</th>
+          </tr>
+          <tr>
+            <td><img src="./img/ACCORD.jpg" class=""></td>
+            <td> People Democratic Party</td>
+            <td>Lagos State</td>
+            <td>
+              <a href="" class="edit">edit</a>
+              <a href="#delete" class="myBtn">delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="./img/PDP.png" class=""> </td>
+            <td> Accord</td>
+            <td>Lagos State</td>
+            <td>
+              <a href="" class="edit">edit</a>
+              <a href="#delete" class="myBtn">delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="./img/ADC2.jpg" class=""> </td>
+            <td> All progressive congress</td>
+            <td>Lagos State</td>
+            <td>
+              <a href="" class="edit">edit</a>
+              <a href="" class="myBtn">delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="./img/ADC2.jpg" class=""> </td>
+            <td> Affican Action Congress</td>
+            <td>Lagos State</td>
+            <td>
+              <a href="" class="edit">edit</a>
+              <a href="" class="myBtn">delete</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+
+    <section id="admin-body">
+    <div id="home-page political party">
+      <div class="home-page-a party-menu">
+        <h1 class="party-header">POLITCAL PARTIES</h1>
+        <hr>
+        <div id="polPty"></div>
+      </div>
+    </div>
+    
+    <div id="home-page government party" >
+      <div class="home-page-b party-menu">
+        <h1 class="party-header">GOVERNMENT OFFICES</h1>
+        <hr>
+        <div id="gov-office"></div>
+        <button class="myBtn">delete</button>
+      </div>
+    </div>
+
+  </section>
+    
+
+  /* table  */
+
+/* #party{ */
+  /* background: #fff; */
+  /* padding: 0.9rem; */
+  /* width: 70%; */
+  /* margin: 0 auto; */
+  /* font-family: Arial, Helvetica, sans-serif; */
+/* } */
+
+#party .party-menu{
+  margin-top: 3rem;
+  align-content: center;
+}
+
+.party-header{
+  font-size: 2.4rem;
+  margin: 4rem 0 0;
+  text-align: center;
+  color: #333333;
+}
+
+table, th, td {
+  border: 1px solid;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-top: none;
+  border-left: none;
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  border: none;
+  height: 30%;
+  margin: 2rem auto;
+  margin-bottom: 1rem;
+  background: #ffffff;
+  box-shadow: 0px 0px 5px rgb(10, 241, 122);
+  border-radius: 3px;
+} 
+
+th {
+  height: 20px;
+  text-transform: uppercase;
+  border-right: none;
+} 
+
+td {
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+td:last-child{
+  border-right: none;
+}  
+
+/* MODAL  */
+.modal{
+  display: none; 
+  position: fixed; 
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+  cursor: pointer;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-content{
+  cursor: pointer;
+  background-color: #fefefe;
+  margin: 10rem auto 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 14px #333;
+  width: 300px;
+}
+
+.modal h3{
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.modal-btn{
+  padding: 0.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.btn-dark{
+  background-color: #333;
+}
+
+.btn-green:hover{
+  color: #333333;
+  background: #76e0b6;
+}
+
+.btn-dark:hover{
+  color: #333333;
+  background:#f4cccc;
+}
+
+  

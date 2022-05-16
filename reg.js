@@ -7,96 +7,89 @@ const secPassWord = document.querySelector('#password2');
 const file = document.querySelector('#file');
 
 
-// const regForm = document.getElementById('reg-form');
+const regForm = document.getElementById('regBtn');
 
-// regForm.addEventListener('click',  (e)=> {
-//   // console.log('hello')
+regForm.addEventListener('click',  (e)=> {
 
-//   // validate form 
-//   let isEmailValid = checkEmail();
-//   isPasswordValid = checkPassword(),
-//     isConfirmPasswordValid = checkConfirmPassword();
-//     isNameValid = checkFirstName()
+  // validate form 
+  let isEmailValid = checkEmail();
+  isPasswordValid = checkPassword(),
+    isConfirmPasswordValid = checkConfirmPassword();
+  isNameValid = checkFirstName()
 
-//   let isFormValid = isEmailValid &&           
-//     isPasswordValid && isConfirmPasswordValid && isNameValid;
+  let isFormValid = isEmailValid &&           
+    isPasswordValid && isConfirmPasswordValid && isNameValid
   
-//   // submit to server if form is valid
-//   if (isFormValid) {
-//     console.log('safe')
-//   }
+  // submit to server if form is valid
+  if (isFormValid) {
+    window.location.href="./login.html"
+  }
 
-//   e.preventDefault()
-// })
+  e.preventDefault()
+})
 
-// function showError(input, message) {
-//   const inputField = input.parentElement;
+function showError(input, message) {
+  const inputField = input.parentElement;
 
-//   inputField.classList.remove('success');
-//   inputField.classList.add('error');
+  inputField.classList.remove('success');
+  inputField.classList.add('error');
 
-//   const error = inputField.querySelector('small');
-//   error.textContent = message;
-// }
+  const error = inputField.querySelector('small');
+  error.textContent = message;
+}
 
-// function showSuccess(input){
-//   const inputField = input.parentElement;
+function showSuccess(input){
+  const inputField = input.parentElement;
 
-//   inputField.classList.add('success');
-//   inputField.classList.remove('error');
+  inputField.classList.add('success');
+  inputField.classList.remove('error');
 
-//   const error = inputField.querySelector('small');
-//   error.textContent = '';
-// }
+  const error = inputField.querySelector('small');
+  error.textContent = '';
+}
 
-// const isRequired = value => value === '' ? false : true;
-// // function isRequired(value) {
-// //   value === '' ? false : true;
-// // }
+const isRequired = value => value === '' ? false : true;
 
+// check email 
+function isEmailValid(email) {
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+};
 
-// // check email 
-// function isEmailValid(email) {
-//   // const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-//   // const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-//   const re = /([a-zA-Z0-9_\-\.]+)[@]([a-zA-Z]+)[\.]([a-zA-Z]+){2,3}$/;
-//   return re.test(email);
-// };
+function checkEmail () {
+  let valid = false;
+  const confirmEmail = email.value.trim();
+  if (!isRequired(confirmEmail)) {
+      showError(email, 'Email cannot be blank.');
+  } else if (!isEmailValid(confirmEmail)) {
+      showError(email, 'Email is not valid.')
+  } else {
+      showSuccess(email);
+      valid = true;
+  }
+  return valid;
+}
 
-// function checkEmail () {
-//   let valid = false;
-//   const confirmEmail = email.value.trim();
-//   if (!isRequired(confirmEmail)) {
-//       showError(email, 'Email cannot be blank.');
-//   } else if (!isEmailValid(confirmEmail)) {
-//       showError(email, 'Email is not valid.')
-//   } else {
-//       showSuccess(email);
-//       valid = true;
-//   }
-//   return valid;
-// }
+function isNameSecure(firstName) {
+  const re = /([a-zA-Z]+)/
+  return re.test(firstName);
+}
+function checkFirstName() {
+  let valid = false;
+  const confirmFirstName = firstName.value.trim();
 
-// function isNameSecure(firstName) {
-//   const re = /([a-zA-Z]+)/
-//   return re.test(firstName);
-// }
-// function checkFirstName() {
-//   let valid = false;
-//   const confirmFirstName = firstName.value.trim();
+  if (!isRequired(confirmFirstName)) {
+    showError(firstName, 'firstname cannot be blank.');
+  } else if (!isNameSecure(confirmFirstName))  {
+    showError(firstName, 'length too long')
+  } else {
+    showSuccess(firstName)
+    valid = true;
+  }
 
-//   if (!isRequired(confirmFirstName)) {
-//     showError(firstName, 'firstname cannot be blank.');
-//   } else if (!isNameSecure(confirmFirstName))  {
-//     showError(firstName, 'length too long')
-//   } else {
-//     showSuccess(firstName)
-//     valid = true;
-//   }
+  return valid;
 
-//   return valid;
-
-// }
+}
 
 // // check password 
 function isPasswordSecure(password){
@@ -122,23 +115,23 @@ function checkPassword() {
 };
 
 // // COMFIRM PASSWORD 
-// function checkConfirmPassword() {
-//   let valid = false;
-//   // check confirm password
-//   const confirmPassword = secPassWord.value.trim();
-//   const password = passWord.value.trim();
+function checkConfirmPassword() {
+  let valid = false;
+  // check confirm password
+  const confirmPassword = secPassWord.value.trim();
+  const password = passWord.value.trim();
 
-//   if (!isRequired(confirmPassword)) {
-//       showError(secPassWord, 'Please enter the password again');
-//   } else if (password !== confirmPassword) {
-//       showError(secPassWord, 'Confirm password does not match');
-//   } else {
-//       showSuccess(secPassWord);
-//       valid = true;
-//   }
+  if (!isRequired(confirmPassword)) {
+      showError(secPassWord, 'Please enter the password again');
+  } else if (password !== confirmPassword) {
+      showError(secPassWord, 'Confirm password does not match');
+  } else {
+      showSuccess(secPassWord);
+      valid = true;
+  }
 
-//   return valid;
-// };
+  return valid;
+};
 
 const createAccount = document.getElementById('regBtn')
 
@@ -151,6 +144,7 @@ createAccount.addEventListener('click', async function (e) {
   formData.append("email", email.value)
   formData.append("phoneNumber", phone.value)
   formData.append("password", passWord.value)
+  formData.append("password2", secPassWord.value)
   formData.append("file", file.files[0])
 
   const response = await fetch(" http://localhost:7000/user", {
@@ -160,8 +154,6 @@ createAccount.addEventListener('click', async function (e) {
 
   const result = await response.json()
   console.log(result)
-
-  window.location.href="./login.html"
 
 })
 

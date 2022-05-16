@@ -21,7 +21,7 @@
         <ul>
           <li><a href="./main-home.html" >Home</a></li>
           <li><a href="./login.html">Login</a></li>
-          <li><a href="./ADMIN/Admin.html">Admin</a></li>
+          <!-- <li><a href="./ADMIN/Admin.html">Admin</a></li> -->
           <li><a href="./VOTE/vote.html">vote</a></li>
           <li><a href="./RESULT/result.html">Result</a></li>
           <li><a href="./petition.html">Petition</a></li>
@@ -38,26 +38,30 @@
         <h1>Application For Office</h1>
 
         <div class="input-field">
-          <label class="tag" for="office-name">Select Office</label>
-          <select class="text" type="text" id="apply-office" required>
-            <option default>-- Select Record Type --</option>
-            <option>federal</option> -->
-            <option>state</option>
-            <option>legislative</option>
-          </select>
-        </div>
+          <label for="about">Candidate Name:</label>
+           <input type="text" id="name-candy" required>
+        </div>  
         <div class="input-field">
-          <label class="tag" for="party-name">Select Office Name</label>
+          <label class="tag" for="office-name">Select Party</label>
+          <select class="text" type="text" id="apply-party" required>
+            <option default>-- Select Record Type --</option>
+            <option>PDP</option>
+            <option>APC</option>
+            <option>ACCORD</option>
+          </select>
+        </div> 
+        <div class="input-field">
+          <label class="tag" for="party-name">Select Office</label>
           <select class="text" type="text" id="apply-name" required>
             <option default>-- Select Record Type --</option>
             <option>president</option>
             <option>senate</option>
-            <option> governor</option>
+            <option>governor</option>
           </select>
         </div>
         <div class="input-field">
           <label for="about">logo:</label>
-           <input type="file" id="file45" required></textarea>
+           <input type="file" id="upload123">
         </div>   
         <button type="submit" id="submit23" class="btn btn-m">Submit</button>
       </form>

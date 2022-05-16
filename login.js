@@ -20,10 +20,24 @@ loginBtn.addEventListener('click', async function (e) {
 
   const response = await getResponse.json()
 
+  if (result.status === 200) {
+    const token = response.data.token;
+    localStorage.setItem("token", token);
+
+    if (response.data.role === "politician") {
+      location.href = "./main-home.html";
+    } else if (response.data.role === "user" && response.data.isAdmin) {
+      location.href = "./ADMIN/Admin.html";
+    }
+    if (response.data.role === "user" && !response.data.isAdmin) {
+      location.href = "./main-home.html";
+    }
+  }
+
   const token = response.data.token
 
-  window.location.href="./main-home.html"
+  // window.location.href="./main-home.html"
 
-  localStorage.setItem('token', token)
+  // localStorage.setItem('token', token)
   
 })

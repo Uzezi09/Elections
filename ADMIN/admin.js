@@ -1,148 +1,87 @@
-const modal = document.getElementById("modal");
-const deleteBtn = document.querySelectorAll(".myBtn");
-const close = document.querySelector('.close');
-const success = document.querySelector('.success')
-const succText = document.querySelector('succ-text')
-
-
-// EVENT FOR DELETE BTN 
-deleteBtn.forEach(box => {
-  box.addEventListener('click', function (e) {
-    console.log('box clicked');
-    modal.style.display = 'block';
-
-    e.preventDefault();
-  });
-});
-
-// when you click anywhere outside the modal 
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-// cancel btn 
-close.addEventListener('click', function () {
-  modal.style.display = 'none';
-})
-
-// success btn 
-success.addEventListener('click', function () {
-  modal.style.display = 'none';
-})
-
-// EVENT FOR EDIT BTN
-const editModal = document.getElementById("edit-modal");
-const editBtn = document.querySelectorAll(".edit");
-
-editBtn.forEach(edit => {
-  edit.addEventListener('click', function (e) {
-    console.log('edit clicked');
-    editModal.style.display = 'block';
-
-    e.preventDefault();
-  });
-});
-
-// when you click anywhere outside the modal 
-window.onclick = function(event) {
-  if (event.target == editModal) {
-    editModal.style.display = "none";
-  }
-}
-
-// EVENT FOR CREATE NEW GOV BTN
+// EVENT FOR CREATE NEW GOV BTN MODAL
 const newgovModal = document.getElementById("newgov-modal");
-const govModalBtn = document.getElementById("govModal-btn");
-const newgovBtn = document.querySelector(".newgov-btn")
+const govBtnUpd = document.getElementById("gov-btn");
 
-govModalBtn.addEventListener('click', function () {
-    newgovModal.style.display = 'block';
-});
+govBtnUpd.addEventListener('click', function () {
+  newgovModal.style.display = 'block';
 
-// when you click anywhere outside the modal 
-newgovBtn.addEventListener('click', function () {
-  newgovModal.style.display = 'none';
-}) 
+  const govBtn = document.querySelector('.fives')
+  const officeType =document.getElementById('officetype')
+  const officeName = document.getElementById('officename2')
+  const fileInput = document.getElementById('loGo')
 
-// Api for create new gov
-const officeType =document.getElementById('officetype')
-const officeName = document.getElementById('officename2')
-const file = document.getElementById('logo')
-const govBtn = document.querySelector('.fives')
+  govBtn.addEventListener('click', async function (e) {
+    e.preventDefault()
+    console.log('hi')
+    
+    const token =localStorage.getItem('token')
 
-govBtn.addEventListener('click', async function (e) {
-  e.preventDefault()
-
-
-  const token =localStorage.getItem('token')
-
-  const formData = new FormData()
+    const formData = new FormData()
     formData.append("type", officeType.value)
     formData.append("name", officeName.value)
-    formData.append("file", file.files[0])
-  
-    console.log(officeType.value)
-    console.log(officeName.value)
-  
-  const getResponse = await fetch("http://localhost:7000/office", {
-    method: "POST",
-    body: formData,
-    headers: {
-      authorization: `Bearer ${token}`
-    }
+    formData.append("file", fileInput.files[0])
+
+    const getResponse = await fetch("http://localhost:7000/office", {
+      method: "POST",
+      body: formData,
+      headers: {
+        authorization: `Bearer ${token}`
+      }
+    })
+      
+    const response = await getResponse.json()
+    console.log(response)   
   })
-
-  const response = await getResponse.json()
-  console.log(response)
-
+  
+    const closeModal = document.getElementById('close34')
+  
+    closeModal.addEventListener('click', function () {
+    
+     newgovModal.style.display = 'none';
+    })
+  
 })
-
-// EVENT FOR CREATE NEW PARTY
+ 
+  
+// // EVENT FOR CREATE NEW PARTY
 const newptyModal = document.getElementById("newpty-modal");
 const ptyModalBtn = document.getElementById("ptyModal-btn");
-const newptyBtn = document.querySelector(".newpty-btn")
 
 ptyModalBtn.addEventListener('click', function () {
   newptyModal.style.display = 'block';
-});
 
-// when you click anywhere outside the modal 
-newptyBtn.addEventListener('click', function (e) {
-  newptyModal.style.display = 'none';
+  const createBtn = document.querySelector(".createBtn")
+  const partyname =document.getElementById('partyname')
+  const hqaddress = document.getElementById('hqaddress11')
+  const inpuTfile = document.getElementById('file');
 
-  e.preventDefault()
-}) 
+  createBtn.addEventListener('click', async function (e) {
+    e.preventDefault()
+  
+    const token =localStorage.getItem('token')
+  
+    const formData = new FormData()
+    formData.append("name", partyname.value)
+    formData.append("hqAddress", hqaddress.value)
+    formData.append("file", inpuTfile.files[0])
+  
+    const getPartyResponse = await fetch("http://localhost:7000/party", {
+      method: "POST", 
+      body: formData,
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    })
+  
+    const partyResult = await getPartyResponse.json()
+    console.log(partyResult)
+  
+  });
 
-// api for create party 
-const partyname =document.getElementById('partyname')
-const hqaddress = document.getElementById('hqaddress11')
-// const partyPol = document.getElementById('party12')
-const inpuTfile = document.getElementById('file');
+  const cancelBtn = document.querySelector('.cancelBtn')
 
-newptyBtn.addEventListener('click', async function (e) {
-  e.preventDefault()
-
-  const token =localStorage.getItem('token')
-
-  const formData = new FormData()
-  formData.append("name", partyname.value)
-  formData.append("hqAddress", hqaddress.value)
-  formData.append("file", inpuTfile.files[0])
-
-  console.log(partyname.value)
-  console.log(hqaddress.value)
-
-  const getPartyResponse = await fetch("http://localhost:7000/party", {
-    method: "POST", 
-    body: formData,
-    headers: {
-      Authorization: `Bearer ${token}`
-    }
+  cancelBtn.addEventListener('click', function (e) {
+    e.preventDefault()
+    newptyModal.style.display = 'none';
   })
-
-  const partyResult = await getPartyResponse.json()
-  console.log(partyResult)
-
 })

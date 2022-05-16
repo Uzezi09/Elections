@@ -4,13 +4,11 @@
   grid-gap: 1rem;
   margin: 2rem auto;
   width: 1000px;
-  /* height: auto; */
-  /* flex-wrap: wrap; */
 }
 
 .gov-office img{
   width: 70%;
-  height: 60%;
+  height: 50%;
   margin: 0.3rem 2rem;
 }
 
