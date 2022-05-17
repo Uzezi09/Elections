@@ -20,7 +20,7 @@ loginBtn.addEventListener('click', async function (e) {
 
   const response = await getResponse.json()
 
-  if (result.status === 200) {
+  if (response.status === 200) {
     const token = response.data.token;
     localStorage.setItem("token", token);
 
@@ -34,7 +34,7 @@ loginBtn.addEventListener('click', async function (e) {
     }
   }
 
-  const token = response.data.token
+  // const token = response.data.token
 
   // window.location.href="./main-home.html"
 

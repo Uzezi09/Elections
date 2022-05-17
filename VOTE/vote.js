@@ -1,54 +1,64 @@
-let candidateArray = []
+let vote = [
+  {
+    "id": 0,
+    "createdOn": Date.now(),
+    "createdBy": 'Maureen',
+    "office": 'federal',
+    "candidate": 'Atiku Abubakar',
+    'logoUrl': 'https://nigerianinfopedia.com.ng/wp-content/uploads/2020/02/richest-politician-in-nigeria.jpeg'
+  },
+  {
+    "id": 1,
+    "createdOn": Date.now(),
+    "createdBy": 'Nana',
+    "office": 'state',
+    "candidate": 'Richard Richard',
+    'logoUrl': 'https://nigerianinfopedia.com.ng/wp-content/uploads/2020/02/richest-politician-in-nigeria.jpeg'
+  }
+]
 
-async function getAllCandidate() {
+async function getAllVote() {
   const token = localStorage.getItem('token')
   
-  const candidateData = await fetch('http://localhost:7000/candidate', {
+  const voteData = await fetch('http://localhost:7000/vote', {
     method: 'GET',
     headers: {
       authorization: `Bearer ${token}`
     }
   })
 
-  const response234 = await candidateData.json()
+  const voteRes = await voteData.json()
 
-  console.log(response234)
-
-  candidateArray = [
-    ...response234.data
+  vote = [
+    ...voteRes.data
   ]
 
-  for (let candi of candidateArray) {
-    presido.appendChild(getCandidate(candi));
-  }
+  for (let voter of vote) {
+    voters.appendChild(getVote(voter));
+  }  
 
 }
-getAllCandidate()
+getAllVote()
 
-const presido = document.querySelector('.presido')
+const voters = document.querySelector('.voters')
+const candyButton = document.querySelector('.candyButton')
 
-function getCandidate(candi) {
-  const candidateProfile = document.createElement('div');
-  candidateProfile.className = 'candidate-profile'
+function getVote(voter) {
+  const candidateDetails = document.createElement('div')
+  candidateDetails.className = 'candidate-details'
   const img = document.createElement('img')
-  img.setAttribute('src', candi.logoUrl)
-  img.className = 'image'
-  candidateProfile.appendChild(img)
+  img.setAttribute('src', voter.logoUrl)
+  img.className = 'img'
+  candidateDetails.appendChild(img)
+  const voterId = document.createElement('div')
+  voterId.className = 'candyId'
+  voterId.innerText = `${voter.id}`
+  // voterId.style.display = "none"
+  candidateDetails.appendChild(voterId)
   const text = document.createElement('div')
   text.className = 'text';
-  text.innerText = `${candi.candidate} \n ${candi.office} \n ${candi.party}`
-  candidateProfile.appendChild(text)
-  const candyId = document.createElement('div')
-  candyId.className = 'candyId'
-  candyId.innerText = `${candi.id}`
-  candyId.style.display = "none"
-  candidateProfile.appendChild(candyId)
-  const candyButton = document.createElement('button')
-  candyButton.className = 'candyButton'
-  candyButton.innerText = "Vote"
-  candidateProfile.appendChild(candyButton);
-
-  return candidateProfile;
+  text.innerText = `${voter.candidate} \n ${voter.office}`
+  candidateDetails.appendChild(text)
   
+  return candidateDetails;
 }
-

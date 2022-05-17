@@ -98,39 +98,42 @@ function createOffice(gOffice) {
 
   govEdit.addEventListener('click', function () {
     
-    editgovmodal.style.display = 'block'; 
+    editgovmodal.style.display = 'block';
 
     const updateGov = document.querySelector('.updateGov')
     const editOfice = document.getElementById('editOfice')
     const editName = document.getElementById('editName')
     const editLogo = document.getElementById('editLogo')
 
-    updateGov.addEventListener('click', async function () {
-      const token = localStorage.getItem('token')
+    setInterval(() => {
+      updateGov.addEventListener('click', async function () {
+        const token = localStorage.getItem('token')
       
-      const urlencoded = new URLSearchParams();
-      urlencoded.append("type", editOfice.value)  
-      urlencoded.append("name", editName.value)
-      urlencoded.append("file", editLogo.files[0])
+        const urlencoded = new URLSearchParams();
+        urlencoded.append("type", editOfice.value)
+        urlencoded.append("name", editName.value)
+        urlencoded.append("file", editLogo.files[0])
 
-      const editGov = await fetch(`http://localhost:7000/office/${gOffice.id}`, {
-        method: 'PUT',
-        body: urlencoded,
-        headers: {
-          authorization: `Bearer ${token}`
-        }
+        const editGov = await fetch(`http://localhost:7000/office/${gOffice.id}`, {
+          method: 'PUT',
+          body: urlencoded,
+          headers: {
+            authorization: `Bearer ${token}`
+          }
+        })
+
+        const editResGov = await editGov.json()
+        console.log(editResGov.data)
       })
-
-      const editResGov = await editGov.json()
-      console.log(editResGov.data)
-    })
     
-    const govClose = document.getElementById('govClose')
+      const govClose = document.getElementById('govClose')
 
-    govClose.addEventListener('click', function () {
-      editgovmodal.style.display = 'none'; 
-    })
+      govClose.addEventListener('click', function () {
+        editgovmodal.style.display = 'none';
+      })
+    }), 100
   })
+  
 
   return govOfficeD;
   

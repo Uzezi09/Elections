@@ -6,42 +6,41 @@ govBtnUpd.addEventListener('click', function () {
   newgovModal.style.display = 'block';
 
   const govBtn = document.querySelector('.fives')
-  const officeType =document.getElementById('officetype')
+  const officeType = document.getElementById('officetype')
   const officeName = document.getElementById('officename2')
   const fileInput = document.getElementById('loGo')
 
-  govBtn.addEventListener('click', async function (e) {
-    e.preventDefault()
-    console.log('hi')
+  
+    govBtn.addEventListener('click', async function (e) {
+      e.preventDefault()
+      console.log('hi')
     
-    const token =localStorage.getItem('token')
+      const token = localStorage.getItem('token')
 
-    const formData = new FormData()
-    formData.append("type", officeType.value)
-    formData.append("name", officeName.value)
-    formData.append("file", fileInput.files[0])
+      const formData = new FormData()
+      formData.append("type", officeType.value)
+      formData.append("name", officeName.value)
+      formData.append("file", fileInput.files[0])
 
-    const getResponse = await fetch("http://localhost:7000/office", {
-      method: "POST",
-      body: formData,
-      headers: {
-        authorization: `Bearer ${token}`
-      }
-    })
+      const getResponse = await fetch("http://localhost:7000/office", {
+        method: "POST",
+        body: formData,
+        headers: {
+          authorization: `Bearer ${token}`
+        }
+      })
       
-    const response = await getResponse.json()
-    console.log(response)   
-  })
+      const response = await getResponse.json()
+      console.log(response)
+    })
   
     const closeModal = document.getElementById('close34')
   
     closeModal.addEventListener('click', function () {
     
-     newgovModal.style.display = 'none';
+      newgovModal.style.display = 'none';
     })
-  
-})
- 
+  })
   
 // // EVENT FOR CREATE NEW PARTY
 const newptyModal = document.getElementById("newpty-modal");
