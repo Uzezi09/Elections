@@ -28,6 +28,7 @@ getAllCandidate()
 const presido = document.querySelector('.presido')
 const voteModal = document.getElementById('vote-modal')
 const voteSuccess = document.getElementById('voteSuccess')
+const voteDelete = document.getElementById('voteDelete')
 
 function getCandidate(candi) {
   const candidateProfile = document.createElement('div');
@@ -73,10 +74,17 @@ function getCandidate(candi) {
           authorization: `Bearer ${token}`
         }
       })
+
       const getVote = await voteResponse.json()
       console.log(getVote)
 
+      voteModal.style.display = 'none'
 
+      voteDelete.addEventListener('click', function () {
+        voteModal.style.display = 'none'
+      })
+
+   
     })
   });
 
