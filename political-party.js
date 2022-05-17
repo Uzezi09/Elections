@@ -3,7 +3,7 @@ let politicalParty = []
 async function getAllParty() {
   const token = localStorage.getItem('token')
 
-  const partyData = await fetch('http://localhost:7000/party', {
+  const partyData = await fetch('https://theelections.herokuapp.com/party', {
     method: 'GET',
     headers: {
       authorization: `Bearer ${token}`
@@ -73,7 +73,7 @@ function createParty(party) {
 
       const urlencoded = new URLSearchParams();
 
-      const getResponse = await fetch(`http://localhost:7000/party/${party.id}`, {
+      const getResponse = await fetch(`https://theelections.herokuapp.com/party/${party.id}`, {
         method: "DELETE",
         body: urlencoded,
         headers: {
@@ -111,7 +111,7 @@ function createParty(party) {
       urlencoded.append("name", theEditName.value)  
       urlencoded.append("hqAddress", theEditHq.value)
 
-      const editParty = await fetch(`http://localhost:7000/party/${party.id}`, {
+      const editParty = await fetch(`https://theelections.herokuapp.com/party/${party.id}`, {
         method: 'PUT',
         body: urlencoded,
         headers: {

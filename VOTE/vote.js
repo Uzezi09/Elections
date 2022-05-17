@@ -1,26 +1,9 @@
-let vote = [
-  {
-    "id": 0,
-    "createdOn": Date.now(),
-    "createdBy": 'Maureen',
-    "office": 'federal',
-    "candidate": 'Atiku Abubakar',
-    'logoUrl': 'https://nigerianinfopedia.com.ng/wp-content/uploads/2020/02/richest-politician-in-nigeria.jpeg'
-  },
-  {
-    "id": 1,
-    "createdOn": Date.now(),
-    "createdBy": 'Nana',
-    "office": 'state',
-    "candidate": 'Richard Richard',
-    'logoUrl': 'https://nigerianinfopedia.com.ng/wp-content/uploads/2020/02/richest-politician-in-nigeria.jpeg'
-  }
-]
+let vote = []
 
 async function getAllVote() {
   const token = localStorage.getItem('token')
   
-  const voteData = await fetch('http://localhost:7000/vote', {
+  const voteData = await fetch('https://theelections.herokuapp.com/vote', {
     method: 'GET',
     headers: {
       authorization: `Bearer ${token}`

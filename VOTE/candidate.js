@@ -3,7 +3,7 @@ let candidateArray = []
 async function getAllCandidate() {
   const token = localStorage.getItem('token')
   
-  const candidateData = await fetch('http://localhost:7000/candidate', {
+  const candidateData = await fetch('https://theelections.herokuapp.com/candidate', {
     method: 'GET',
     headers: {
       authorization: `Bearer ${token}`
@@ -55,29 +55,20 @@ function getCandidate(candi) {
     voteModal.style.display = 'block'
 
     voteSuccess.addEventListener('click', async function () {
-      // console.log('hi')
+
       const token = localStorage.getItem('token')
 
-      voteSuccess.setAttribute('votecandi', candi.candidate)
-      voteSuccess.setAttribute('voteOffice', candi.office)
-      voteSuccess.setAttribute('src', candi.logoUrl)
-
-      const voteCandidate = voteSuccess.getAttribute("votecandi")
-      const voteOffice = voteSuccess.getAttribute("voteOffice")
-      const votefile = voteSuccess.getAttribute("src")
-
-      const urlencoded = new URLSearchParams();
-       urlencoded.append("candidate", voteCandidate)
-       urlencoded.append("office", voteOffice)
-       urlencoded.append("file", votefile)
+      const formData = new FormData();
+       formData.append("candidate", candi.candidate)
+       formData.append("office", candi.office)
+       formData.append("logoUrl", candi.logoUrl)
       
-      console.log(voteCandidate)
-      console.log(voteOffice)
-      console.log(votefile)
+      console.log([...formData])
+      console.log(candi.candidate)
 
-      const voteResponse = await fetch(`http://localhost:7000/vote`, {
+      const voteResponse = await fetch(`https://theelections.herokuapp.com/vote`, {
         method: "POST",
-        body: urlencoded,
+        body: formData,
         headers: {
           authorization: `Bearer ${token}`
         }

@@ -147,7 +147,7 @@ createAccount.addEventListener('click', async function (e) {
   formData.append("password2", secPassWord.value)
   formData.append("file", file.files[0])
 
-  const response = await fetch(" http://localhost:7000/user", {
+  const response = await fetch("https://theelections.herokuapp.com/user", {
     method: "POST", 
     body: formData
   })

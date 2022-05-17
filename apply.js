@@ -18,7 +18,7 @@ addBtn.addEventListener('click', async function (e) {
 
   // console.log(fileOutput.files[0])
 
-  const getOfficeResponse = await fetch("http://localhost:7000/candidate", {
+  const getOfficeResponse = await fetch("https://theelections.herokuapp.com/candidate", {
     method: "POST", 
     body: urlencoded,
     headers: {

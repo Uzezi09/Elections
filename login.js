@@ -13,7 +13,7 @@ loginBtn.addEventListener('click', async function (e) {
 
   console.log(email.value)
 
-  const getResponse = await fetch("http://localhost:7000/user/login", {
+  const getResponse = await fetch("https://theelections.herokuapp.com/user/login", {
     method: "POST",
     body: formData
   })
@@ -33,11 +33,5 @@ loginBtn.addEventListener('click', async function (e) {
       location.href = "./main-home.html";
     }
   }
-
-  // const token = response.data.token
-
-  // window.location.href="./main-home.html"
-
-  // localStorage.setItem('token', token)
   
 })

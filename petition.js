@@ -15,7 +15,7 @@ petBtn.addEventListener('click', async function (e) {
   formData.append("body", bodyText.value)
   formData.append("file", file.files[0])
 
-  const petitionData = await fetch('http://localhost:7000/petition', {
+  const petitionData = await fetch('https://theelections.herokuapp.com/petition', {
     method: "POST",
     body: formData,
     headers: {

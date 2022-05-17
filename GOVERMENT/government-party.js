@@ -3,7 +3,7 @@ let governmentoffice = []
 async function getAllOffice() {
   const token = localStorage.getItem('token')
   
-  const govData = await fetch('http://localhost:7000/office', {
+  const govData = await fetch('https://theelections.herokuapp.com/office', {
     method: 'GET',
     headers: {
       authorization: `Bearer ${token}`
@@ -73,7 +73,7 @@ function createOffice(gOffice) {
 
       const urlencoded = new URLSearchParams();
 
-      const DeleteResponse = await fetch(`http://localhost:7000/office/${gOffice.id}`, {
+      const DeleteResponse = await fetch(`https://theelections.herokuapp.com/office/${gOffice.id}`, {
         method: "DELETE",
         body: urlencoded,
         headers: {
@@ -114,7 +114,7 @@ function createOffice(gOffice) {
         urlencoded.append("name", editName.value)
         urlencoded.append("file", editLogo.files[0])
 
-        const editGov = await fetch(`http://localhost:7000/office/${gOffice.id}`, {
+        const editGov = await fetch(`https://theelections.herokuapp.com/office/${gOffice.id}`, {
           method: 'PUT',
           body: urlencoded,
           headers: {

@@ -22,7 +22,7 @@ govBtnUpd.addEventListener('click', function () {
       formData.append("name", officeName.value)
       formData.append("file", fileInput.files[0])
 
-      const getResponse = await fetch("http://localhost:7000/office", {
+      const getResponse = await fetch("https://theelections.herokuapp.com/office", {
         method: "POST",
         body: formData,
         headers: {
@@ -64,7 +64,7 @@ ptyModalBtn.addEventListener('click', function () {
     formData.append("hqAddress", hqaddress.value)
     formData.append("file", inpuTfile.files[0])
   
-    const getPartyResponse = await fetch("http://localhost:7000/party", {
+    const getPartyResponse = await fetch("https://theelections.herokuapp.com/party", {
       method: "POST", 
       body: formData,
       headers: {
